@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 #code: utf-8
+# Version 1.10
 
 import sys
 import time
@@ -45,6 +46,7 @@ while True:
     if (repoch<=cepoch):
         s.sendto(msg.encode("utf-8"),DEST_ADDR)
         print("i={0}  Cepoch={1}  Repoch={2} {3} {4}".format(i,cepoch,repoch,tm,msg))
+        time.sleep(0.01)
         i+=1
         if (i>=lmax):
             break
